@@ -1,21 +1,23 @@
 package Java_Sem_All.Home_Work.HW_3;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 /**
 *Реализовать алгоритм сортировки слиянием
  */
 public class Task_4 {
     public static void main(String[] args) {
-        List<Integer> s = new ArrayList<>();
-        s.add(84);
-        s.add(55);
-        s.add(8);
-        s.add(1);
-        s.add(-2);
-        s.add(7);
-        s.add(88);
-        s.add(99);
+        int size = 20;
+        List<Integer> s = startListCreate(size);
         System.out.println(mergeSort(s));
+    }
+    public static List<Integer> startListCreate(int size) {
+        List<Integer> listRnd = new ArrayList<>();
+        Random random = new Random();
+        for (int i = 0; i < size; i++) {
+            listRnd.add(random.nextInt(201) - 100);
+        }
+        return listRnd;
     }
 
     public static List<Integer> mergeTwoList(List<Integer> a, List<Integer> b) {
