@@ -100,10 +100,10 @@ public class Task_1 {
             if (i.equals("1")){
                 listOS.add("linux");
             }
-            if (i.equals("2")){
+            else if (i.equals("2")){
                 listOS.add("Windows 10");
             }
-            if (i.equals("3")){
+            else if (i.equals("3")){
                 listOS.add("Windows 11");
             }
             else{
@@ -128,13 +128,13 @@ public class Task_1 {
             if (i.equals("1")){
                 listColor.add("черный");
             }
-            if (i.equals("2")){
+            else if (i.equals("2")){
                 listColor.add("серый");
             }
-            if (i.equals("3")){
+            else if (i.equals("3")){
                 listColor.add("синий");
             }
-            if (i.equals("4")){
+            else if (i.equals("4")){
                 listColor.add("красный");
             }
             else{
