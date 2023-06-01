@@ -38,7 +38,7 @@ public class Task_1 {
             listOS.add(note.getOS());
             listColor.add(note.getColor());
         }
-        
+
         while (true){
             Scanner sc = new Scanner(System.in);
             System.out.println("Выберите пункт списка:" + 
@@ -105,6 +105,13 @@ public class Task_1 {
                 listOS.add("Windows 10");
             }
             if (i.equals("3")){
+                listOS.add("Windows 11");
+            }
+            else{
+                System.out.println("Введено неверное значение");
+                System.out.println();
+                listOS.add("linux");
+                listOS.add("Windows 10");
                 listOS.add("Windows 11");
             }
         }
