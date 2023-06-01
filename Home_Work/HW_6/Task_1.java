@@ -44,7 +44,7 @@ public class Task_1 {
             System.out.println("Выберите пункт списка:" + 
             "\n1 - ОЗУ (от " + minRam + " до " + maxRam + ")" + 
             "\n2 - Объем ЖД (от " + minHdd + " до " + maxHdd + ")" + 
-            "\n3 - Операционная система" + listOS +
+            "\n3 - Операционная система " + listOS +
             "\n4 - Цвет " + listColor + 
             "\n5 - Показать подходящие модели");
 
@@ -58,10 +58,10 @@ public class Task_1 {
                 maxHdd = getMAXint();
             }
             if (word.equals("3")){
-                getListOS();
+                getListOS(listOS);
             }
             if (word.equals("4")){
-                getListColor();
+                getListColor(listColor);
             }
             if (word.equals("5")){
                 System.out.println();
@@ -88,17 +88,16 @@ public class Task_1 {
         return m;
     }
 
-    static Set<String> getListOS() {
+    static Set<String> getListOS(Set<String> listOS) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Выберете через пробел желаемую OS:" + 
         "\n1 - linux" +
         "\n2 - Windows 10" +
         "\n3 - Windows 11");
         String word = sc.nextLine();
-        Set<String> listOS = new HashSet<>();
-        String str1 = "1";
+        listOS.clear();
         for (String i : word.split(" ")){
-            if (i.equals(str1)){
+            if (i.equals("1")){
                 listOS.add("linux");
             }
             if (i.equals("2")){
@@ -110,15 +109,13 @@ public class Task_1 {
             else{
                 System.out.println("Введено неверное значение");
                 System.out.println();
-                listOS.add("linux");
-                listOS.add("Windows 10");
-                listOS.add("Windows 11");
             }
+
         }
         return listOS;
     }
 
-    static Set<String> getListColor() {
+    static Set<String> getListColor(Set<String> listColor) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Выберете через пробел желаемую OS:" + 
         "\n1 - черный" +
@@ -126,8 +123,7 @@ public class Task_1 {
         "\n3 - синий" +
         "\n4 - красный");
         String word = sc.nextLine();
-        Set<String> listColor = new HashSet<>();
-        String str1 = "1";
+        listColor.clear();
         for (String i : word.split(" ")){
             if (i.equals("1")){
                 listColor.add("черный");
@@ -144,10 +140,6 @@ public class Task_1 {
             else{
                 System.out.println("Введено неверное значение");
                 System.out.println();
-                listColor.add("черный");
-                listColor.add("серый");
-                listColor.add("синий");
-                listColor.add("красный");
             }
         }
         return listColor;
